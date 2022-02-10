@@ -6,9 +6,7 @@ export default function App() {
   return (
     <div className="container">
       <Header />
-      <div className="main-content">
-        <Meme />
-      </div>
+      <Meme />
     </div>
   );
 };
