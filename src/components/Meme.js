@@ -2,17 +2,21 @@ import React from 'react';
 import memesData from '../data.json';
 
 export default function Meme() {
-  const [memeImage, setMemeImage] = React.useState(
-    getRandomElem(memesData.data.memes).url
-  );
+  const [meme, setMeme] = React.useState({
+    topText: 'top text',
+    bottomText: 'bottom text',
+    memeImage: getRandomElem(memesData.data.memes).url
+  });
   
   function getRandomElem(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
   
   function getMemeImg() {
-    const randomMeme = getRandomElem(memesData.data.memes);
-    setMemeImage(randomMeme.url);
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      memeImage: getRandomElem(memesData.data.memes).url
+    }));
   }
   
   return (
@@ -32,7 +36,11 @@ export default function Meme() {
           <div className="new-button--label">Get a new meme image 🖼</div>
         </button>
       </div>
-      <img src={memeImage} className="meme-image" alt="meme image"/>
+      <div className="meme-container">
+        <img src={meme.memeImage} className="meme-image" alt="meme image" />
+        <p className="meme-text top-text">{meme.topText}</p>
+        <p className="meme-text bottom-text">{meme.bottomText}</p>
+      </div>
     </main>
   );
 };

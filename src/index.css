@@ -93,8 +93,20 @@ nav h3 {
   font-family: 'Karla', sans-serif;
 }
 
-.meme-image {
-  max-width: 478px;
+.meme-container {
+  display: flex;
+  flex-direction: column;
   margin: 36px 0;
   border: 1px solid #D5D4D8;
+}
+
+.meme-image {
+  max-width: 478px;
+}
+
+.meme-text {
+  font-family: 'Impact', sans-serif;
+  font-size: 32px;
+  line-height: 39px;
+  color: white;
 }
