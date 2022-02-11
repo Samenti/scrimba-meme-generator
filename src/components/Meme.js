@@ -3,8 +3,8 @@ import memesData from '../data.json';
 
 export default function Meme() {
   const [meme, setMeme] = React.useState({
-    topText: 'top text',
-    bottomText: 'bottom text',
+    topText: 'TOP TEXT',
+    bottomText: 'BOTTOM TEXT',
     memeImage: getRandomElem(memesData.data.memes).url
   });
   
