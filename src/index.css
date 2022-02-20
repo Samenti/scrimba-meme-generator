@@ -110,6 +110,7 @@ nav h3 {
   line-height: 39px;
   letter-spacing: 1px;
   text-align: center;
+  white-space: nowrap;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
