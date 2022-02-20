@@ -18,6 +18,14 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "overrides": [
+      {
+        "files": ["*.js"],
+        "rules": {
+          "no-unused-vars": "off"
+        }
+      }
+    ],
     "extends": [
       "react-app",
       "react-app/jest"
